@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Arena Duel — 3D FPS (Keyboard)</title>
+    <meta
+      name="description"
+      content="A tiny keyboard-controlled 3D arena shooter. Strafe with arrows, rotate with A/D, shoot with Space."
+    />
+    <link rel="stylesheet" href="./styles/site.css" />
+    <script type="module" src="./src/site/home.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Arena Duel Home">
+        <span class="brandMark" aria-hidden="true"></span>
+        <span class="brandText">Arena Duel</span>
+      </a>
+      <nav class="nav">
+        <a class="navLink" href="./index.html" data-nav="home">Home</a>
+        <a class="navLink" href="./play.html" data-nav="play">Play</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="heroCopy">
+          <p class="kicker">3D · First-person · 1v1 AI</p>
+          <h1>Keyboard-only arena FPS.</h1>
+          <p class="subtitle">
+            Strafe with arrows, rotate with A/D, and land shots with Space. One opponent. No
+            downloads. Just play.
+          </p>
+          <div class="ctaRow">
+            <a class="btn primary" href="./play.html">Play now</a>
+            <button class="btn ghost" type="button" data-scroll-to="#controls">
+              See controls
+            </button>
+          </div>
+          <div class="metaRow">
+            <div class="pill">Single file static site</div>
+            <div class="pill">Three.js</div>
+            <div class="pill">Desktop recommended</div>
+          </div>
+        </div>
+
+        <div class="heroCard" aria-label="Preview">
+          <div class="heroCardTop">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <div class="heroCardTitle">Live match</div>
+          </div>
+          <div class="heroCardBody">
+            <div class="hudPreview">
+              <div class="hudLine">
+                <span>HP</span><span class="bar"><i style="width: 78%"></i></span><span>78</span>
+              </div>
+              <div class="hudLine enemy">
+                <span>ENEMY</span><span class="bar"><i style="width: 42%"></i></span
+                ><span>42</span>
+              </div>
+            </div>
+            <div class="previewGrid" aria-hidden="true">
+              <div class="tile"></div>
+              <div class="tile"></div>
+              <div class="tile"></div>
+              <div class="tile"></div>
+              <div class="tile"></div>
+              <div class="tile"></div>
+            </div>
+            <div class="previewTip">Tip: Use cover blocks to break line-of-sight.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="controls">
+        <div class="sectionHeader">
+          <h2>Controls</h2>
+          <p class="subtitle">Exactly mapped for fast keyboard play.</p>
+        </div>
+
+        <div class="controlsGrid">
+          <div class="card">
+            <h3>Move</h3>
+            <dl class="kv">
+              <div><dt>W</dt><dd>Forward</dd></div>
+              <div><dt>X</dt><dd>Back</dd></div>
+              <div><dt>← / →</dt><dd>Strafe</dd></div>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>Aim</h3>
+            <dl class="kv">
+              <div><dt>A / D</dt><dd>Rotate</dd></div>
+              <div><dt>↑ / ↓</dt><dd>Look up/down</dd></div>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>Combat</h3>
+            <dl class="kv">
+              <div><dt>Space</dt><dd>Shoot</dd></div>
+              <div><dt>Esc</dt><dd>Pause / Help</dd></div>
+              <div><dt>R</dt><dd>Restart (paused/ended)</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="sectionHeader">
+          <h2>How it works</h2>
+          <p class="subtitle">A tiny 3D shooter built from simple shapes.</p>
+        </div>
+        <div class="split">
+          <div class="card">
+            <h3>Arena</h3>
+            <p>
+              A clean rectangle with cover blocks. Use strafing and sightlines to out-position the
+              AI.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Opponent</h3>
+            <p>
+              Roams when it can’t see you. Engages when it can, strafing and firing with a fair
+              spread.
+            </p>
+          </div>
+        </div>
+        <div class="ctaRow end">
+          <a class="btn primary" href="./play.html">Jump into the arena</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <div class="footerLeft">
+          <div class="brandSmall">
+            <span class="brandMark" aria-hidden="true"></span>
+            <span>Arena Duel</span>
+          </div>
+          <div class="footerNote">Static demo site. Keyboard required.</div>
+        </div>
+        <div class="footerRight">
+          <a class="footerLink" href="./play.html">Play</a>
+          <a class="footerLink" href="./index.html#controls">Controls</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

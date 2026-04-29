@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Play — Arena Duel</title>
+    <meta name="description" content="Play Arena Duel in your browser." />
+    <link rel="stylesheet" href="./styles/site.css" />
+    <link rel="stylesheet" href="./styles/play.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.176.0/build/three.module.js"
+        }
+      }
+    </script>
+
+    <script type="module" src="./src/play/bootstrap.js"></script>
+  </head>
+  <body class="playBody">
+    <header class="topbar compact">
+      <a class="brand" href="./index.html" aria-label="Back to Home">
+        <span class="brandMark" aria-hidden="true"></span>
+        <span class="brandText">Arena Duel</span>
+      </a>
+      <nav class="nav">
+        <a class="navLink" href="./index.html" data-nav="home">Home</a>
+        <a class="navLink" href="./play.html" data-nav="play">Play</a>
+      </nav>
+      <div class="topbarRight">
+        <button class="btn tiny ghost" type="button" id="pauseBtn">Pause (Esc)</button>
+        <button class="btn tiny ghost" type="button" id="restartBtn" disabled>Restart (R)</button>
+      </div>
+    </header>
+
+    <main class="playMain">
+      <div class="mobileGate" id="mobileGate" hidden>
+        <div class="mobileCard">
+          <h2>Desktop recommended</h2>
+          <p class="subtitle">
+            This demo needs a keyboard (W/X, arrows, A/D, Space). Open on a desktop browser to
+            play.
+          </p>
+          <a class="btn primary" href="./index.html">Back to home</a>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" class="gameCanvas" aria-label="Arena Duel canvas"></canvas>
+
+      <div class="hud" aria-live="polite">
+        <div class="hudRow">
+          <div class="hudBlock">
+            <div class="hudLabel">HP</div>
+            <div class="hudBar">
+              <div class="hudBarFill" id="playerHpBar"></div>
+            </div>
+            <div class="hudValue" id="playerHpText">100</div>
+          </div>
+          <div class="hudBlock enemy">
+            <div class="hudLabel">ENEMY</div>
+            <div class="hudBar">
+              <div class="hudBarFill" id="enemyHpBar"></div>
+            </div>
+            <div class="hudValue" id="enemyHpText">100</div>
+          </div>
+        </div>
+        <div class="hudHint" id="hudHint">
+          W forward · X back · ←/→ strafe · A/D rotate · ↑/↓ look · Space shoot · Esc pause
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay" hidden>
+        <div class="overlayCard">
+          <div class="overlayTitle" id="overlayTitle">Paused</div>
+          <div class="overlayBody" id="overlayBody">
+            <div class="overlayKeys">
+              <div><kbd>W</kbd> forward</div>
+              <div><kbd>X</kbd> back</div>
+              <div><kbd>←</kbd>/<kbd>→</kbd> strafe</div>
+              <div><kbd>A</kbd>/<kbd>D</kbd> rotate</div>
+              <div><kbd>↑</kbd>/<kbd>↓</kbd> look</div>
+              <div><kbd>Space</kbd> shoot</div>
+              <div><kbd>R</kbd> restart</div>
+              <div><kbd>Esc</kbd> resume</div>
+            </div>
+          </div>
+          <div class="overlayActions">
+            <button class="btn primary" id="overlayResumeBtn" type="button">Resume</button>
+            <button class="btn ghost" id="overlayRestartBtn" type="button">Restart</button>
+            <a class="btn ghost" href="./index.html">Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
