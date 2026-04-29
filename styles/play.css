@@ -109,6 +109,10 @@
   backdrop-filter: blur(10px);
 }
 
+.overlay[hidden] {
+  display: none !important;
+}
+
 .overlayCard {
   width: min(700px, calc(100% - 40px));
   border-radius: 18px;
@@ -160,6 +164,10 @@ kbd {
   place-items: center;
   background: rgba(0, 0, 0, 0.8);
   z-index: 50;
+}
+
+.mobileGate[hidden] {
+  display: none !important;
 }
 
 .mobileCard {
